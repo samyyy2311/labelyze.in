@@ -26,12 +26,12 @@
   color-scheme:dark;
 }
 [data-theme="light"]{
-  --bg:#F0EDE6;--s1:#E8E3DB;--s2:#DFD9D0;
-  --b1:rgba(0,0,0,0.06);--b2:rgba(0,0,0,0.09);--b3:rgba(0,0,0,0.14);
-  --a:#1A8FD4;--adim:rgba(26,143,212,0.09);--aborder:rgba(26,143,212,0.28);
-  --w1:#0D1117;--w2:rgba(13,17,23,0.6);--w3:rgba(13,17,23,0.38);
-  --green:#00A87A;--red:#D93535;--amber:#B87200;
-  --card-bg:rgba(0,0,0,0.03);--card-border:rgba(0,0,0,0.09);
+  --bg:#F1EDE6;--s1:#F3F6FA;--s2:#E7EDF5;
+  --b1:rgba(26,35,56,0.10);--b2:rgba(26,35,56,0.20);--b3:rgba(26,35,56,0.30);
+  --a:#5BB8FF;--adim:#E4F3FF;--aborder:rgba(91,184,255,0.4);
+  --w1:#121923;--w2:rgba(18,25,35,0.62);--w3:rgba(18,25,35,0.42);
+  --green:#00B894;--red:#FF5C5C;--amber:#F0A94A;
+  --card-bg:#FFFFFF;--card-border:rgba(26,35,56,0.10);
   color-scheme:light;
 }
 :root{--blur:blur(48px);--r:16px;--nav-h:54px;--fd:'Montserrat',sans-serif;--fb:'DM Sans',sans-serif;}
@@ -45,7 +45,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 
 /* NAV */
 nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:500;width:calc(100% - 48px);max-width:1100px;border-radius:100px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:rgba(255,255,255,0.06);backdrop-filter:var(--blur) saturate(2);-webkit-backdrop-filter:var(--blur) saturate(2);border:1px solid var(--card-border);box-shadow:0 8px 40px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.12);transition:background .3s}
-[data-theme="light"] nav{background:rgba(240,237,230,0.8)}
+[data-theme="light"] nav{background:rgba(241,237,230,0.88)}
 nav::before{content:'';position:absolute;inset:0;border-radius:100px;pointer-events:none;background:linear-gradient(145deg,rgba(255,255,255,0.08) 0%,transparent 55%)}
 nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.44),transparent);pointer-events:none}
 .logo{font-family:var(--fd);font-weight:900;font-size:17px;letter-spacing:-0.5px;color:var(--w1);text-decoration:none;flex-shrink:0;position:relative;z-index:1}
