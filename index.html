@@ -173,8 +173,13 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .isub{font-size:15px;font-weight:300;color:var(--w2);max-width:480px;margin:0 auto;line-height:1.75}
 
 /* SCORING — 2-col top, grade scale full-width below */
-.scoreg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;align-items:start}
+.scoreg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;align-items:stretch}
 .scores{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--r);padding:24px;backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
+/* Left column — penalties card fills full height */
+.scoreg > .scores{height:100%}
+/* Right column wrapper — flex so two cards share total height equally */
+.scores-right{display:flex;flex-direction:column;gap:16px}
+.scores-right > .scores:last-child{flex:1}
 .scorest{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 .scorerow{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:.5px solid var(--b1);font-size:13px;color:var(--w2)}
 .scorerow:last-child{border-bottom:none}
@@ -376,7 +381,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   <section class="hero">
     <div class="ep fu d1"><span class="ed"></span>The only Indian scanner that checks FSSAI against EU and FDA simultaneously</div>
     <h1 class="fu d2">Know what's actually<br><em>in what you buy.</em></h1>
-    <p class="hero-sub fu d3">Scan any Indian packaged food. Get an instant verdict on ingredients restricted by EU or FDA. In plain language, before you buy. <b>Free. Private. Works offline.</b></p>
+    <p class="hero-sub fu d3">Scan any Indian packaged food. Get an instant verdict on ingredients restricted by EU or FDA. In plain language, before you buy.<br><b>Free. Private. Works offline.</b></p>
     <div class="so fu d3">
       <div class="sw">
         <div class="pc2">
@@ -392,8 +397,11 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
         <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
         </a>
-        <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
-          <img src="https://indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48" onerror="this.closest('a').innerHTML='<span style=\'display:flex;align-items:center;gap:10px;padding:2px 6px\'><span style=\'font-size:22px\'>📱</span><span><span style=\'display:block;font-size:9px;color:rgba(244,241,235,0.3);letter-spacing:.07em;text-transform:uppercase\'>Available on</span><span style=\'font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;color:#F4F1EB\'>Indus App Store</span></span></span>'">
+        <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
+          <div class="badge-text">
+            <span class="badge-sub">Available on</span>
+            <span class="badge-name">Indus App Store</span>
+          </div>
         </a>
       </div>
       <p class="bnote">Free to download · No account needed · Works fully offline</p>
@@ -469,7 +477,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
         <div class="scorerow"><span>Sodium &gt; 1,500mg per 100g</span><span class="v vn">-8 pts</span></div>
         <div class="scorerow"><span>Saturated fat &gt; 5g per 100g</span><span class="v vn">-5 pts</span></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="scores-right">
         <div class="scores">
           <div class="scorest">Positive signals</div>
           <div class="scorerow"><span>Whole grain as first ingredient</span><span class="v vp">+5 pts</span></div>
@@ -501,13 +509,13 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <p class="ss rv">These are not rare edge cases. They are everyday ingredients in products available across India.</p>
     <div class="cmp rv">
       <div class="cr2 ch2"><span>Ingredient</span><span class="cc">FSSAI</span><span class="cc">EU EFSA</span><span class="cc hide-sm">US FDA</span></div>
-      <div class="cr2"><span>Potassium Bromate</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
-      <div class="cr2"><span>Titanium Dioxide E171</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cmid cc hide-sm">Restricted</span></div>
+      <div class="cr2"><span>Sodium Cyclamate</span><span class="cok cc">Allowed</span><span class="cok cc">Allowed</span><span class="cban cc hide-sm">Banned</span></div>
       <div class="cr2"><span>Tartrazine E102</span><span class="cok cc">Allowed</span><span class="cmid cc">Warning</span><span class="cok cc hide-sm">Allowed</span></div>
+      <div class="cr2"><span>Titanium Dioxide E171</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cmid cc hide-sm">Restricted</span></div>
+      <div class="cr2"><span>Potassium Bromate</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
       <div class="cr2"><span>Brominated Vegetable Oil</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
       <div class="cr2"><span>Azodicarbonamide</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
       <div class="cr2"><span>Vanaspati (trans fats)</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
-      <div class="cr2"><span>Sodium Cyclamate</span><span class="cok cc">Allowed</span><span class="cok cc">Allowed</span><span class="cban cc hide-sm">Banned</span></div>
     </div>
   </div>
 </div>
@@ -548,8 +556,11 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
       <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
       </a>
-      <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
-        <img src="https://indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48" onerror="this.closest('a').innerHTML='<span style=\'display:flex;align-items:center;gap:10px;padding:2px 6px\'><span style=\'font-size:22px\'>📱</span><span><span style=\'display:block;font-size:9px;color:rgba(244,241,235,0.3);letter-spacing:.07em;text-transform:uppercase\'>Available on</span><span style=\'font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;color:#F4F1EB\'>Indus App Store</span></span></span>'">
+      <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
+        <div class="badge-text">
+          <span class="badge-sub">Available on</span>
+          <span class="badge-name">Indus App Store</span>
+        </div>
       </a>
     </div>
   </div>
