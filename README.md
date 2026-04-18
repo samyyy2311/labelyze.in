@@ -127,14 +127,14 @@ The app can download updates automatically in the background.
 
 ## Roadmap
 
-### v1.1 Quick Wins
+### v1.1
 
 - Non-food scoring fixes for cosmetics and household products  
 - Ingredient watchlist for custom avoids  
 - Better not-found barcode flow with OCR suggestions  
 - Shareable scan result cards for WhatsApp and social sharing  
 
-### v2.0 Major Features
+### v2.0
 
 - Label Lie Detector for misleading front-pack claims  
 - Better product alternatives for low scores  
@@ -142,7 +142,7 @@ The app can download updates automatically in the background.
 - Family profiles with separate preferences  
 - Contribution tracking for missing products  
 
-### v3.0 Long Term Vision
+### v3.0
 
 - AR shelf scanning while shopping  
 - Medicine scanner  
@@ -155,8 +155,6 @@ The app can download updates automatically in the background.
 ## Built For India
 
 Designed around Indian shelves, Indian brands, and Indian buying habits.
-
-Not copied from western databases.
 
 ---
 
@@ -174,8 +172,3 @@ Not copied from western databases.
 Actively building and improving.
 
 ---
-
-## Creator
-
-Built by Samarth Lad
-```
