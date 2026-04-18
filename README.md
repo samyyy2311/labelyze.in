@@ -53,19 +53,19 @@ Paste or type ingredients from online listings, damaged packaging, or imported p
 ## Screenshots
 
 <p align="center">
+  <img src="snapshots/onboarding-1.png" width="220" />
+  <img src="snapshots/onboarding-2.png" width="220" />
   <img src="snapshots/scanner.png" width="220" />
-  <img src="snapshots/discover.png" width="220" />
+</p>
+
+<p align="center">
   <img src="snapshots/history.png" width="220" />
+  <img src="snapshots/discover.png" width="220" />
+  <img src="snapshots/browse.png" width="220" />
 </p>
 
 <p align="center">
   <img src="snapshots/profile.png" width="220" />
-  <img src="snapshots/browse.png" width="220" />
-  <img src="snapshots/onboarding-1.png" width="220" />
-</p>
-
-<p align="center">
-  <img src="snapshots/onboarding-2.png" width="220" />
 </p>
 
 ---
