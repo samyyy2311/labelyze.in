@@ -68,9 +68,9 @@ Regulatory Gap
 Real Scan Example
 </td>
 <td align="center">
-<img src="snapshots/scanner.png" width="220"/><br>
-<b>Scanner</b><br>
-Barcode & Ingredient Scan
+<img src="snapshots/discover.png" width="220"/><br>
+<b>Discover</b><br>
+Better Everyday Picks
 </td>
 </tr>
 
@@ -81,9 +81,9 @@ Barcode & Ingredient Scan
 Recent Scan Trail
 </td>
 <td align="center">
-<img src="snapshots/discover.png" width="220"/><br>
-<b>Discover</b><br>
-Better Everyday Picks
+<img src="snapshots/scanner.png" width="220"/><br>
+<b>Scanner</b><br>
+Barcode & Ingredient Scan
 </td>
 <td align="center">
 <img src="snapshots/browse.png" width="220"/><br>
