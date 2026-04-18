@@ -141,33 +141,11 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .fb2{position:absolute;bottom:4px;left:-8px;transform:translateX(-100%);background:rgba(91,184,255,.08);border:.5px solid rgba(91,184,255,.24);border-radius:8px;padding:5px 9px;font-size:10px;color:var(--a);white-space:nowrap;font-weight:600;animation:sli 5s ease-in-out infinite}
 @keyframes sli{0%,38%{opacity:0;transform:translateX(calc(-100% - 6px))}65%,100%{opacity:1;transform:translateX(-100%)}}
 
-/* Store badges */
-.badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
-/* Google Play — let SVG define the width naturally */
-.badge-gplay{
-  display:inline-flex;align-items:center;
-  height:52px;
-  background:#000;border-radius:9px;
-  border:1px solid rgba(255,255,255,0.18);
-  text-decoration:none;flex-shrink:0;
-  overflow:hidden;
-  transition:transform .2s,opacity .2s;
-}
-.badge-gplay svg{display:block;height:52px;width:auto;flex-shrink:0}
-/* GitHub — hardcode same width as Play SVG renders at 52px: ~175px */
-.badge-gh{
-  display:inline-flex;align-items:center;justify-content:center;gap:11px;
-  height:52px;width:175px;
-  background:#000;border-radius:9px;
-  border:1px solid rgba(255,255,255,0.18);
-  text-decoration:none;flex-shrink:0;
-  transition:transform .2s,opacity .2s;
-}
-.badge-gplay:hover,.badge-gh:hover{transform:translateY(-2px);opacity:.85}
-.badge-gh-text{display:flex;flex-direction:column;gap:1px}
-.badge-gh-sub{font-size:9px;color:rgba(255,255,255,0.55);letter-spacing:.1em;text-transform:uppercase;font-family:var(--fb)}
-.badge-gh-name{font-family:var(--fd);font-size:16px;font-weight:700;color:#ffffff;line-height:1.2;letter-spacing:-0.01em}
-[data-theme="light"] .badge-gplay,[data-theme="light"] .badge-gh{background:#000;border-color:rgba(0,0,0,0.15)}
+/* Store badges — both use identical SVG container */
+.badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+.badge-gplay{display:inline-flex;align-items:center;text-decoration:none;border-radius:9px;overflow:hidden;border:none;background:#000;flex-shrink:0;transition:transform .2s,opacity .2s}
+.badge-gplay svg{display:block;height:52px;width:auto}
+.badge-gplay:hover{transform:translateY(-2px);opacity:.85}
 .bnote{font-size:11px;color:var(--w3);text-align:center;margin-top:14px;letter-spacing:.02em}
 
 /* Stats */
@@ -281,7 +259,7 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .cta-wrap h2{font-family:var(--fd);font-weight:900;font-size:clamp(28px,4vw,48px);letter-spacing:-2px;line-height:1.06;color:var(--w1);margin-bottom:14px;position:relative;z-index:1}
 .cta-wrap h2 span{color:var(--a)}
 .cta-wrap p{font-size:15px;font-weight:300;color:var(--w2);max-width:400px;margin:0 auto 40px;line-height:1.75;position:relative;z-index:1}
-.cta-badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.cta-badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
 
 /* Privacy overlay */
 #lov{display:none;position:fixed;inset:0;z-index:600;background:var(--bg);overflow-y:auto}
@@ -348,9 +326,8 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   .fn{font-size:22px}
   .so{width:220px}
   .badges{flex-direction:column;align-items:center}
-  .badge-gplay,.badge-gh{height:44px}
   .badge-gplay svg{height:44px}
-  .badge-gh{width:148px}
+  .badge-gh{height:44px;width:149px}
   .cta-badges{flex-direction:column;align-items:center}
 }
 </style>
@@ -445,13 +422,22 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
             <g><path class="gp6" d="M36.6,34.41l-18.86,20.02s0,0,0,.01c.58,2.17,2.56,3.77,4.92,3.77.94,0,1.83-.26,2.58-.7l.06-.04,21.23-12.25-9.94-10.82Z"/><path class="gp5" d="M55.68,31h-.02s-9.17-5.33-9.17-5.33l-10.33,9.19,10.36,10.36,9.12-5.26c1.6-.86,2.68-2.55,2.68-4.49s-1.07-3.61-2.65-4.47h0Z"/><path class="gp0" d="M17.73,16.44c-.11.42-.17.86-.17,1.31v35.38c0,.45.06.89.17,1.31l19.51-19.51-19.51-18.49Z"/><path class="gp4" d="M36.74,35.43l9.76-9.76-21.21-12.3c-.77-.46-1.67-.73-2.63-.73-2.36,0-4.34,1.6-4.92,3.78h0s19,19,19,19h0Z"/></g>
           </svg>
         </a>
-        <!-- GitHub Releases badge -->
-        <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge-gh" target="_blank" rel="noopener">
-          <svg class="badge-gh-icon" height="26" viewBox="0 0 16 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          <div class="badge-gh-text">
-            <span class="badge-gh-sub">Get it on</span>
-            <span class="badge-gh-name">GitHub</span>
-          </div>
+        <!-- GitHub Releases badge — identical SVG shell as Google Play -->
+        <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge-gplay" target="_blank" rel="noopener" aria-label="Get it on GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.96 70.87">
+            <rect x="-.11" width="239.17" height="70.87" rx="8.86" ry="8.86" fill="#000"/>
+            <path fill="#a6a6a6" d="M230.21,1.42c4.1,0,7.44,3.34,7.44,7.44v53.15c0,4.1-3.34,7.44-7.44,7.44H8.75c-4.1,0-7.44-3.34-7.44-7.44V8.86C1.31,4.76,4.65,1.42,8.75,1.42h221.46M230.21,0H8.75C3.88,0-.11,3.99-.11,8.86v53.15c0,4.87,3.99,8.86,8.86,8.86h221.46c4.87,0,8.86-3.99,8.86-8.86V8.86c0-4.87-3.99-8.86-8.86-8.86h0Z"/>
+            <!-- Octocat: same size/position as Play triangle -->
+            <g transform="translate(16.7,14.1) scale(2.5)" fill="#fff">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </g>
+            <!-- GET IT ON: same position/style as Google Play badge -->
+            <text x="83" y="19" font-family="Arial,sans-serif" font-size="10.5" font-weight="400" fill="rgba(255,255,255,0.7)" letter-spacing="1.8">GET IT ON</text>
+            <!-- GitHub wordmark: scaled to match Google Play text height ~20px -->
+            <g transform="translate(44.76,23.81) scale(0.2875)" fill="#fff">
+              <path d="M204.937 99.0045L204.937 49.2827L218.915 49.2827L218.915 99.0045L204.937 99.0045ZM246.016 99.0045C236.727 99.0045 233.099 95.0232 233.099 86.6183L233.099 60.9611L224.252 60.9611L224.252 49.2827L233.099 49.2827L233.099 39.3737L247.078 36.1002L247.078 49.2827L257.429 49.2827L257.429 60.9611L247.078 60.9611L247.078 83.5217C247.078 86.2644 248.317 87.3261 251.059 87.3261L257.429 87.3261L257.429 99.0045L246.016 99.0045ZM343.47 99.8892C332.588 99.8892 326.66 93.8731 326.66 82.9024L326.66 49.2827L340.728 49.2827L340.728 79.1866C340.728 85.2912 343.47 88.6532 348.69 88.6532C354.706 88.6532 359.307 83.0794 359.307 75.4707L359.307 49.2827L373.374 49.2827L373.374 99.0045L359.307 99.0045L359.307 90.5996C356.653 95.9964 350.283 99.8892 343.47 99.8892ZM410.613 99.8892C403.832 99.8892 397.639 95.9964 394.687 90.4226L394.687 99.0045L380.709 99.0045L380.709 29.6417L394.776 29.6417L394.776 58.3954C397.639 52.3792 404.098 48.1325 410.613 48.1325C424.181 48.1325 431.348 57.5107 430.873 74.0551C431.348 90.4226 423.916 99.8892 410.613 99.8892ZM405.658 88.1223C412.945 88.1223 416.926 82.7255 416.452 74.0551C416.926 65.2963 412.945 59.8994 405.658 59.8994C399.851 59.8994 395.251 65.5617 394.776 73.3473L394.776 74.1436C395.251 82.1946 399.851 88.1223 405.658 88.1223ZM304.734 29.6417L304.734 57.7761L278.369 57.7761L278.369 29.6417L263.329 29.6417L263.329 99.0045L278.369 99.0045L278.369 71.224L304.734 71.224L304.734 99.0045L319.775 99.0045L319.775 29.6417L304.734 29.6417ZM166.628 100.332C146.102 100.332 133.185 86.2644 133.185 64.2346C133.185 42.2048 146.368 28.3146 167.247 28.3146C184.234 28.3146 194.497 35.5693 197.77 47.7786L182.553 51.406C180.695 44.7705 175.387 41.1431 167.247 41.1431C155.126 41.1431 148.579 49.1057 148.579 64.2346C148.579 79.3635 154.949 87.503 166.893 87.503C177.864 87.503 184.411 80.7791 184.411 69.366L184.411 66.7119L188.304 72.1087L165.655 72.1087L165.655 59.3686L199.628 59.3686L199.628 67.4196C199.628 88.5647 187.331 100.332 166.628 100.332ZM211.926 44.5936C216.615 44.5936 220.243 40.9662 220.243 36.2771C220.243 31.5881 216.615 27.9607 211.926 27.9607C207.237 27.9607 203.61 31.5881 203.61 36.2771C203.61 40.9662 207.237 44.5936 211.926 44.5936Z"/>
+            </g>
+          </svg>
         </a>
       </div>
       <p class="bnote">Free to download · No account needed · Works fully offline</p>
@@ -613,12 +599,18 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
           <g><path class="gp6" d="M36.6,34.41l-18.86,20.02s0,0,0,.01c.58,2.17,2.56,3.77,4.92,3.77.94,0,1.83-.26,2.58-.7l.06-.04,21.23-12.25-9.94-10.82Z"/><path class="gp5" d="M55.68,31h-.02s-9.17-5.33-9.17-5.33l-10.33,9.19,10.36,10.36,9.12-5.26c1.6-.86,2.68-2.55,2.68-4.49s-1.07-3.61-2.65-4.47h0Z"/><path class="gp0" d="M17.73,16.44c-.11.42-.17.86-.17,1.31v35.38c0,.45.06.89.17,1.31l19.51-19.51-19.51-18.49Z"/><path class="gp4" d="M36.74,35.43l9.76-9.76-21.21-12.3c-.77-.46-1.67-.73-2.63-.73-2.36,0-4.34,1.6-4.92,3.78h0s19,19,19,19h0Z"/></g>
         </svg>
       </a>
-      <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge-gh" target="_blank" rel="noopener">
-        <svg class="badge-gh-icon" height="26" viewBox="0 0 16 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-        <div class="badge-gh-text">
-          <span class="badge-gh-sub">Get it on</span>
-          <span class="badge-gh-name">GitHub</span>
-        </div>
+      <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge-gplay" target="_blank" rel="noopener" aria-label="Get it on GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.96 70.87">
+          <rect x="-.11" width="239.17" height="70.87" rx="8.86" ry="8.86" fill="#000"/>
+          <path fill="#a6a6a6" d="M230.21,1.42c4.1,0,7.44,3.34,7.44,7.44v53.15c0,4.1-3.34,7.44-7.44,7.44H8.75c-4.1,0-7.44-3.34-7.44-7.44V8.86C1.31,4.76,4.65,1.42,8.75,1.42h221.46M230.21,0H8.75C3.88,0-.11,3.99-.11,8.86v53.15c0,4.87,3.99,8.86,8.86,8.86h221.46c4.87,0,8.86-3.99,8.86-8.86V8.86c0-4.87-3.99-8.86-8.86-8.86h0Z"/>
+          <g transform="translate(16.7,14.1) scale(2.5)" fill="#fff">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </g>
+          <text x="83" y="19" font-family="Arial,sans-serif" font-size="10.5" font-weight="400" fill="rgba(255,255,255,0.7)" letter-spacing="1.8">GET IT ON</text>
+          <g transform="translate(44.76,23.81) scale(0.2875)" fill="#fff">
+            <path d="M204.937 99.0045L204.937 49.2827L218.915 49.2827L218.915 99.0045L204.937 99.0045ZM246.016 99.0045C236.727 99.0045 233.099 95.0232 233.099 86.6183L233.099 60.9611L224.252 60.9611L224.252 49.2827L233.099 49.2827L233.099 39.3737L247.078 36.1002L247.078 49.2827L257.429 49.2827L257.429 60.9611L247.078 60.9611L247.078 83.5217C247.078 86.2644 248.317 87.3261 251.059 87.3261L257.429 87.3261L257.429 99.0045L246.016 99.0045ZM343.47 99.8892C332.588 99.8892 326.66 93.8731 326.66 82.9024L326.66 49.2827L340.728 49.2827L340.728 79.1866C340.728 85.2912 343.47 88.6532 348.69 88.6532C354.706 88.6532 359.307 83.0794 359.307 75.4707L359.307 49.2827L373.374 49.2827L373.374 99.0045L359.307 99.0045L359.307 90.5996C356.653 95.9964 350.283 99.8892 343.47 99.8892ZM410.613 99.8892C403.832 99.8892 397.639 95.9964 394.687 90.4226L394.687 99.0045L380.709 99.0045L380.709 29.6417L394.776 29.6417L394.776 58.3954C397.639 52.3792 404.098 48.1325 410.613 48.1325C424.181 48.1325 431.348 57.5107 430.873 74.0551C431.348 90.4226 423.916 99.8892 410.613 99.8892ZM405.658 88.1223C412.945 88.1223 416.926 82.7255 416.452 74.0551C416.926 65.2963 412.945 59.8994 405.658 59.8994C399.851 59.8994 395.251 65.5617 394.776 73.3473L394.776 74.1436C395.251 82.1946 399.851 88.1223 405.658 88.1223ZM304.734 29.6417L304.734 57.7761L278.369 57.7761L278.369 29.6417L263.329 29.6417L263.329 99.0045L278.369 99.0045L278.369 71.224L304.734 71.224L304.734 99.0045L319.775 99.0045L319.775 29.6417L304.734 29.6417ZM166.628 100.332C146.102 100.332 133.185 86.2644 133.185 64.2346C133.185 42.2048 146.368 28.3146 167.247 28.3146C184.234 28.3146 194.497 35.5693 197.77 47.7786L182.553 51.406C180.695 44.7705 175.387 41.1431 167.247 41.1431C155.126 41.1431 148.579 49.1057 148.579 64.2346C148.579 79.3635 154.949 87.503 166.893 87.503C177.864 87.503 184.411 80.7791 184.411 69.366L184.411 66.7119L188.304 72.1087L165.655 72.1087L165.655 59.3686L199.628 59.3686L199.628 67.4196C199.628 88.5647 187.331 100.332 166.628 100.332ZM211.926 44.5936C216.615 44.5936 220.243 40.9662 220.243 36.2771C220.243 31.5881 216.615 27.9607 211.926 27.9607C207.237 27.9607 203.61 31.5881 203.61 36.2771C203.61 40.9662 207.237 44.5936 211.926 44.5936Z"/>
+          </g>
+        </svg>
       </a>
     </div>
   </div>
