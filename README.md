@@ -6,7 +6,7 @@ Labelyze helps people understand what they buy by checking ingredients against *
 
 <p align="center">
   <a href="https://labelyze.in">Website</a> •
-  <a href="https://github.com/samyyy2311/Labelyze.in/releases/latest">Download APK</a>
+  <a href="https://github.com/samyyy2311/Labelyze.in/releases/download/v1.0.1/app-release.apk">Download APK</a>
 </p>
 
 ---
