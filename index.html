@@ -10,8 +10,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://labelyze.in">
 <meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://labelyze.in/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://labelyze.in/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#08090C">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="canonical" href="https://labelyze.in/">
 <meta name="google-site-verification" content="4cu-5yEzV7j0KBUOMesDAUxne-Q12XgvrRslg0UBeBk" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +57,6 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:500;widt
 [data-theme="light"] nav::after{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.12),transparent)}
 [data-theme="light"] .nl:hover{background:rgba(26,35,56,0.06)}
 [data-theme="light"] .tt{background:rgba(26,35,56,0.06);border-color:var(--b1)}
-[data-theme="light"] .ep{background:rgba(91,184,255,0.08);border-color:rgba(91,184,255,0.25)}
 [data-theme="light"] .pc2{background:var(--s2);border-color:var(--b2)}
 [data-theme="light"] .pl span{background:var(--b2)}
 [data-theme="light"] .sg{background:var(--b1)}
@@ -60,8 +65,6 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:500;widt
 [data-theme="light"] .sfn{border-color:var(--b1)}
 [data-theme="light"] .stdc{background:#FFFFFF;box-shadow:0 1px 4px rgba(26,35,56,0.06)}
 [data-theme="light"] .stdc::after{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.08),transparent)}
-[data-theme="light"] .also-label{color:var(--w3)}
-[data-theme="light"] .ap{background:#FFFFFF;border-color:var(--b1)}
 [data-theme="light"] .fl2{background:var(--b1)}
 [data-theme="light"] .fr{background:#FFFFFF}
 [data-theme="light"] .fr:hover{background:var(--s1)}
@@ -86,8 +89,6 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:500;widt
 [data-theme="light"] .vc::after{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.08),transparent)}
 [data-theme="light"] .cta-wrap{background:#FFFFFF;border-color:var(--b1);box-shadow:0 2px 20px rgba(26,35,56,0.06)}
 [data-theme="light"] .cta-wrap::before{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.1),transparent)}
-[data-theme="light"] #lov{background:var(--bg)}
-[data-theme="light"] .ov-nav{background:var(--bg)}
 [data-theme="light"] #mobl{background:rgba(241,237,230,0.98)}
 nav::before{content:'';position:absolute;inset:0;border-radius:100px;pointer-events:none;background:linear-gradient(145deg,rgba(255,255,255,0.08) 0%,transparent 55%)}
 nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.44),transparent);pointer-events:none}
@@ -122,9 +123,6 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 /* HERO */
 .hero{padding:130px 0 80px;text-align:center}
 
-/* Version badge — replaces glowing dot pill */
-.ver-badge{display:inline-flex;align-items:center;gap:8px;background:var(--adim);border:1px solid var(--aborder);border-radius:100px;padding:5px 14px 5px 10px;font-size:11px;font-weight:500;color:var(--w3);margin-bottom:36px;letter-spacing:.03em}
-.ver-tag{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--a);color:#08090C;border-radius:100px;padding:2px 8px;line-height:1.5}
 
 .hero h1{font-family:var(--fd);font-weight:900;font-size:clamp(42px,7.5vw,80px);line-height:.97;letter-spacing:-3px;color:var(--w1);margin-bottom:24px}
 .hero h1 em{font-style:normal;color:var(--a)}
@@ -182,10 +180,6 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .sdd{font-size:12px;color:var(--w3);line-height:1.55}
 .stdc.ref{opacity:.42}
 .stdc.ref .sdn::after{content:' · Reference';display:inline-block;margin-left:8px;font-size:9px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--w3);font-family:var(--fb)}
-.also{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;align-items:center}
-.also-label{font-size:11px;color:var(--w3)}
-.ap{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;border:.5px solid var(--b2);background:var(--card-bg);font-size:11px;color:var(--w3);font-weight:500}
-.ap .fw{width:20px;height:14px;border-radius:2px;margin-bottom:0;border-color:transparent}
 
 /* Feature list */
 .fl2{display:flex;flex-direction:column;gap:1px;background:var(--b1);border:.5px solid var(--b1);border-radius:var(--r);overflow:hidden;margin-top:48px}
@@ -198,7 +192,6 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .tr{color:var(--red);border-color:rgba(255,92,92,.32);background:rgba(255,92,92,.09)}
 .tg{color:var(--green);border-color:rgba(0,200,150,.28);background:rgba(0,200,150,.08)}
 .ty{color:var(--amber);border-color:rgba(244,187,114,.28);background:rgba(244,187,114,.08)}
-.tb{color:var(--a);border-color:rgba(91,184,255,.28);background:rgba(91,184,255,.08)}
 
 /* Impact */
 .isec{padding:96px 0;border-top:.5px solid var(--b1);border-bottom:.5px solid var(--b1);text-align:center;position:relative;overflow:hidden}
@@ -270,36 +263,7 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .cta-badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
 
 /* Privacy overlay */
-#lov{display:none;position:fixed;inset:0;z-index:600;background:var(--bg);overflow-y:auto}
-.ov-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 36px;border-bottom:.5px solid var(--b1);position:sticky;top:0;background:var(--bg);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
-.ov-back{font-size:13px;font-weight:500;color:var(--w3);cursor:pointer;display:flex;align-items:center;gap:7px;border:none;background:none;transition:color .2s;font-family:var(--fb)}
-.ov-back:hover{color:var(--w1)}
-.ov-logo{font-family:var(--fd);font-size:17px;font-weight:900;color:var(--w1)}
-.ov-logo span{color:var(--a)}
-.ov-inn{max-width:660px;margin:0 auto;padding:56px 36px 100px}
-.ov-h1{font-family:var(--fd);font-size:clamp(26px,3.6vw,40px);font-weight:900;letter-spacing:-.035em;line-height:1.06;margin-bottom:7px;color:var(--w1)}
-.ov-date{font-size:10px;font-weight:500;color:var(--w3);letter-spacing:.08em;margin-bottom:44px;display:block}
-.ov-h2{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1);margin-bottom:8px;margin-top:32px}
-.ov-p{font-size:13.5px;color:var(--w2);line-height:1.8;margin-bottom:6px}
-.ov-p a{color:var(--a);text-decoration:none}
-.ov-ul{margin:8px 0 8px 18px;display:flex;flex-direction:column;gap:5px}
-.ov-ul li{font-size:13.5px;color:var(--w2);line-height:1.7}
 
-/* Footer — proper legal footer */
-footer{border-top:.5px solid var(--b1);padding:32px 52px}
-.footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:24px}
-.footer-brand{}
-.flo{font-family:var(--fd);font-weight:900;font-size:15px;letter-spacing:-.3px;color:var(--w1);text-decoration:none;display:block;margin-bottom:6px}
-.flo span{color:var(--a)}
-.footer-tagline{font-size:11px;color:var(--w3);line-height:1.5;max-width:220px}
-.footer-links-group{display:flex;gap:40px;flex-wrap:wrap}
-.footer-col{}
-.footer-col-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-bottom:10px}
-.footer-col a,.footer-col span{display:block;font-size:12px;color:var(--w3);text-decoration:none;transition:color .2s;cursor:pointer;line-height:1;margin-bottom:8px}
-.footer-col a:hover,.footer-col span:hover{color:var(--a)}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:.5px solid var(--b1)}
-.footer-legal{font-size:10px;color:var(--w3);line-height:1.6;max-width:600px}
-.footer-copy{font-size:10px;color:var(--w3);white-space:nowrap}
 
 /* Animations */
 .fu{opacity:0;transform:translateY(16px);animation:fadeup .65s ease forwards}
@@ -329,10 +293,11 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
   .footer-top{flex-direction:column;gap:28px}
   .footer-links-group{gap:28px}
   .hero{padding:96px 0 52px}
-  .ov-nav{padding:13px 22px}
-  .ov-inn{padding:40px 22px 80px}
 }
 @media(max-width:620px){
+  .ft-inner{flex-direction:column;gap:28px}
+  .ft-cols{gap:28px}
+  .ft-bottom{flex-direction:column}
   .stdg{grid-template-columns:1fr}
   .vg{grid-template-columns:repeat(2,1fr)}
   .cr2{grid-template-columns:2fr 1fr 1fr}
@@ -345,42 +310,28 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
   .cta-badges{flex-direction:column;align-items:center}
   .footer-bottom{flex-direction:column;align-items:flex-start}
 }
+
+/* Footer */
+footer{border-top:.5px solid var(--b1);padding:40px 52px 32px}
+.ft-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:32px}
+.ft-left{}
+.ft-logo{font-family:var(--fd);font-weight:900;font-size:15px;letter-spacing:-.3px;color:var(--w1);text-decoration:none;display:block;margin-bottom:8px}
+.ft-logo span{color:var(--a)}
+.ft-tagline{font-size:12px;color:var(--w2);font-weight:500;margin-bottom:2px}
+.ft-sub{font-size:11px;color:var(--w3)}
+.ft-cols{display:flex;gap:48px;flex-wrap:wrap}
+.ft-col-head{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-bottom:12px}
+.ft-col a{display:block;font-size:12px;color:var(--w3);text-decoration:none;transition:color .2s;margin-bottom:8px;line-height:1}
+.ft-col a:last-child{margin-bottom:0}
+.ft-col a:hover{color:var(--a)}
+.ft-bottom{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:.5px solid var(--b1)}
+.ft-disclaimer{font-size:11px;color:var(--w3);line-height:1.6;max-width:560px}
+.ft-copy{font-size:11px;color:var(--w3);white-space:nowrap;flex-shrink:0}
 </style>
 </head>
 <body>
 <div class="bg-glow"></div>
 <div class="page">
-
-<!-- Privacy Overlay (in-page UX) -->
-<div id="lov">
-  <div class="ov-nav">
-    <button class="ov-back" onclick="closePP()"><svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Back</button>
-    <span class="ov-logo">Label<span>yze</span></span>
-    <span style="width:60px"></span>
-  </div>
-  <div class="ov-inn">
-    <h1 class="ov-h1">Privacy Policy</h1>
-    <span class="ov-date">Effective: 1 April 2026</span>
-    <div class="ov-h2">What we collect</div>
-    <p class="ov-p">Labelyze does not collect any personal information. There is no account, no login, and no profile linked to you.</p>
-    <p class="ov-p">Your scan history, health profile, allergen selections, dietary preferences, ingredient watchlist, personal notes, and weekly goal are all stored locally on your device. None of this data is transmitted to any server.</p>
-    <div class="ov-h2">Product submissions</div>
-    <p class="ov-p">If you choose to submit a missing product, you are sharing: the product name, brand, barcode, category, ingredients, and optionally nutrition information. This is submitted to a database managed by CaffeineLabs for the purpose of improving the product database. Submissions are opt-in only. You can turn off sharing at any time in Profile &gt; Data and Privacy, or during onboarding.</p>
-    <p class="ov-p">When sharing is turned off, no data from your device is sent anywhere.</p>
-    <div class="ov-h2">Analytics and advertising</div>
-    <p class="ov-p">Labelyze contains no analytics, no advertising SDKs, and no third-party trackers of any kind.</p>
-    <div class="ov-h2">Notifications</div>
-    <p class="ov-p">If you opt in to the weekly summary notification, this is scheduled locally on your device. No data is sent to a server to trigger it.</p>
-    <div class="ov-h2">App review prompt</div>
-    <p class="ov-p">The app may ask you to rate it on the Play Store using the standard in-app review prompt. This prompt is provided by Google. No data is collected or shared by Labelyze as part of this prompt.</p>
-    <div class="ov-h2">Children</div>
-    <p class="ov-p">Labelyze does not knowingly collect data from anyone, including children. No personal data is collected at all.</p>
-    <div class="ov-h2">Changes</div>
-    <p class="ov-p">If this policy changes, the updated version will be published at <a href="https://labelyze.in/privacy">labelyze.in/privacy</a> with a new effective date.</p>
-    <div class="ov-h2">Contact</div>
-    <p class="ov-p">For any privacy questions: <a href="mailto:hello@labelyze.in">hello&#64;labelyze.in</a></p>
-  </div>
-</div>
 
 <!-- Mobile menu -->
 <div id="mobl" aria-hidden="true">
@@ -418,11 +369,7 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
 
 <div class="csm">
   <section class="hero">
-    <!-- Version badge — replaces glowing dot pill -->
-    <div class="ver-badge fu d1">
-      <span class="ver-tag">New</span>
-      <span>v1.6 — now on Play Store</span>
-    </div>
+    <!-- Version badge: replaces glowing dot pill -->
     <h1 class="fu d2">Know what's actually<br><em>in what you buy.</em></h1>
     <p class="hero-sub fu d3">Scan any Indian packaged food. Get an instant verdict on ingredients restricted by EU or FDA. In plain language, before you buy.<br><b>Free. Private. Works offline.</b></p>
     <div class="so fu d3">
@@ -439,12 +386,12 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
       <div class="badges">
         <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge-gplay" target="_blank" rel="noopener" aria-label="Get it on Google Play">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.96 70.87">
-            <defs><style>.gp0{fill:#4285f4}.gp1{fill:#a6a6a6}.gp2{stroke:#fff;stroke-miterlimit:10;stroke-width:.2px;fill:#fff}.gp3{fill:#fff}.gp4{fill:#34a853}.gp5{fill:#fbbc04}.gp6{fill:#ea4335}</style></defs>
+            <defs><style>.gph0{fill:#4285f4}.gph1{fill:#a6a6a6}.gph2{stroke:#fff;stroke-miterlimit:10;stroke-width:.2px;fill:#fff}.gph3{fill:#fff}.gph4{fill:#34a853}.gph5{fill:#fbbc04}.gph6{fill:#ea4335}</style></defs>
             <rect x="-.11" width="239.17" height="70.87" rx="8.86" ry="8.86"/>
-            <path class="gp1" d="M230.21,1.42c4.1,0,7.44,3.34,7.44,7.44v53.15c0,4.1-3.34,7.44-7.44,7.44H8.75c-4.1,0-7.44-3.34-7.44-7.44V8.86C1.31,4.76,4.65,1.42,8.75,1.42h221.46M230.21,0H8.75C3.88,0-.11,3.99-.11,8.86v53.15c0,4.87,3.99,8.86,8.86,8.86h221.46c4.87,0,8.86-3.99,8.86-8.86V8.86c0-4.87-3.99-8.86-8.86-8.86h0Z"/>
-            <g><path class="gp2" d="M83.9,18.15c0,1.48-.44,2.67-1.32,3.55-1,1.05-2.3,1.57-3.9,1.57s-2.84-.53-3.91-1.59c-1.07-1.06-1.61-2.38-1.61-3.96s.54-2.89,1.61-3.96c1.07-1.06,2.38-1.6,3.91-1.6.76,0,1.49.15,2.18.44.69.3,1.25.69,1.66,1.19l-.93.94c-.7-.84-1.67-1.26-2.91-1.26-1.12,0-2.09.39-2.9,1.18s-1.22,1.81-1.22,3.06.41,2.28,1.22,3.06c.82.79,1.78,1.18,2.9,1.18,1.19,0,2.18-.4,2.97-1.19.51-.52.81-1.23.89-2.15h-3.86v-1.28h5.15c.05.28.07.54.07.8Z"/><path class="gp2" d="M92.07,13.71h-4.84v3.37h4.37v1.28h-4.37v3.37h4.84v1.31h-6.21v-10.63h6.21v1.31h0Z"/><path class="gp2" d="M97.83,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gp2" d="M106.08,23.03v-10.63h1.36v10.63h-1.36Z"/><path class="gp2" d="M113.51,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gp2" d="M130.3,21.66c-1.05,1.08-2.34,1.61-3.9,1.61s-2.85-.54-3.9-1.61c-1.05-1.07-1.57-2.39-1.57-3.94s.52-2.87,1.57-3.94c1.04-1.08,2.34-1.61,3.9-1.61s2.84.54,3.89,1.62c1.05,1.08,1.57,2.39,1.57,3.93s-.52,2.87-1.57,3.94ZM123.52,20.77c.79.8,1.75,1.19,2.89,1.19s2.1-.4,2.89-1.19c.79-.8,1.18-1.81,1.18-3.05s-.4-2.26-1.18-3.05c-.78-.8-1.75-1.19-2.89-1.19s-2.1.4-2.89,1.19c-.78.8-1.18,1.81-1.18,3.05s.4,2.26,1.18,3.05Z"/><path class="gp2" d="M133.79,23.03v-10.63h1.66l5.17,8.27h.06l-.06-2.05v-6.22h1.37v10.63h-1.43l-5.41-8.67h-.06l.06,2.05v6.62h-1.37,0Z"/></g>
-            <path class="gp3" d="M120.61,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM120.61,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM104.11,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM104.11,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM84.48,40.85v3.2h7.65c-.23,1.8-.83,3.11-1.74,4.03-1.11,1.11-2.85,2.34-5.91,2.34-4.71,0-8.39-3.8-8.39-8.51s3.68-8.51,8.39-8.51c2.54,0,4.4,1,5.76,2.28l2.26-2.26c-1.91-1.83-4.45-3.22-8.02-3.22-6.45,0-11.87,5.25-11.87,11.7s5.42,11.7,11.87,11.7c3.48,0,6.11-1.14,8.16-3.28,2.11-2.11,2.77-5.08,2.77-7.48,0-.74-.06-1.43-.17-2h-10.76,0ZM164.75,43.33c-.63-1.68-2.54-4.8-6.45-4.8s-7.11,3.05-7.11,7.53c0,4.22,3.2,7.53,7.48,7.53,3.45,0,5.45-2.11,6.28-3.34l-2.57-1.71c-.86,1.26-2.03,2.08-3.71,2.08s-2.88-.77-3.65-2.28l10.08-4.17-.34-.86h0ZM154.47,45.84c-.09-2.91,2.26-4.4,3.94-4.4,1.31,0,2.43.66,2.8,1.6l-6.74,2.8ZM146.28,53.15h3.31v-22.15h-3.31v22.15ZM140.86,40.22h-.11c-.74-.88-2.17-1.68-3.97-1.68-3.77,0-7.22,3.31-7.22,7.56s3.45,7.51,7.22,7.51c1.8,0,3.22-.8,3.97-1.71h.11v1.08c0,2.88-1.54,4.42-4.03,4.42-2.03,0-3.28-1.46-3.8-2.68l-2.88,1.2c.83,2,3.03,4.45,6.68,4.45,3.88,0,7.16-2.28,7.16-7.85v-13.53h-3.14v1.23ZM137.06,50.64c-2.28,0-4.2-1.91-4.2-4.54s1.91-4.6,4.2-4.6,4.03,1.94,4.03,4.6-1.77,4.54-4.03,4.54ZM180.26,31h-7.92v22.15h3.31v-8.39h4.62c3.66,0,7.27-2.65,7.27-6.88s-3.6-6.88-7.27-6.88ZM180.34,41.68h-4.7v-7.59h4.7c2.47,0,3.87,2.05,3.87,3.8s-1.4,3.8-3.87,3.8h0ZM200.77,38.5c-2.39,0-4.87,1.05-5.9,3.39l2.94,1.23c.63-1.23,1.79-1.62,3.02-1.62,1.71,0,3.45,1.03,3.48,2.85v.23c-.6-.34-1.88-.86-3.45-.86-3.16,0-6.38,1.74-6.38,4.99,0,2.96,2.59,4.87,5.5,4.87,2.22,0,3.45-1,4.22-2.16h.11v1.71h3.19v-8.49c0-3.93-2.94-6.13-6.73-6.13h0ZM200.38,50.63c-1.08,0-2.59-.54-2.59-1.88,0-1.71,1.88-2.37,3.5-2.37,1.45,0,2.14.31,3.02.74-.26,2.05-2.02,3.5-3.93,3.5ZM219.12,38.98l-3.79,9.6h-.11l-3.93-9.6h-3.56l5.9,13.42-3.36,7.47h3.45l9.09-20.89h-3.68ZM189.35,53.15h3.31v-22.15h-3.31v22.15Z"/>
-            <g><path class="gp6" d="M36.6,34.41l-18.86,20.02s0,0,0,.01c.58,2.17,2.56,3.77,4.92,3.77.94,0,1.83-.26,2.58-.7l.06-.04,21.23-12.25-9.94-10.82Z"/><path class="gp5" d="M55.68,31h-.02s-9.17-5.33-9.17-5.33l-10.33,9.19,10.36,10.36,9.12-5.26c1.6-.86,2.68-2.55,2.68-4.49s-1.07-3.61-2.65-4.47h0Z"/><path class="gp0" d="M17.73,16.44c-.11.42-.17.86-.17,1.31v35.38c0,.45.06.89.17,1.31l19.51-19.51-19.51-18.49Z"/><path class="gp4" d="M36.74,35.43l9.76-9.76-21.21-12.3c-.77-.46-1.67-.73-2.63-.73-2.36,0-4.34,1.6-4.92,3.78h0s19,19,19,19h0Z"/></g>
+            <path class="gph1" d="M230.21,1.42c4.1,0,7.44,3.34,7.44,7.44v53.15c0,4.1-3.34,7.44-7.44,7.44H8.75c-4.1,0-7.44-3.34-7.44-7.44V8.86C1.31,4.76,4.65,1.42,8.75,1.42h221.46M230.21,0H8.75C3.88,0-.11,3.99-.11,8.86v53.15c0,4.87,3.99,8.86,8.86,8.86h221.46c4.87,0,8.86-3.99,8.86-8.86V8.86c0-4.87-3.99-8.86-8.86-8.86h0Z"/>
+            <g><path class="gph2" d="M83.9,18.15c0,1.48-.44,2.67-1.32,3.55-1,1.05-2.3,1.57-3.9,1.57s-2.84-.53-3.91-1.59c-1.07-1.06-1.61-2.38-1.61-3.96s.54-2.89,1.61-3.96c1.07-1.06,2.38-1.6,3.91-1.6.76,0,1.49.15,2.18.44.69.3,1.25.69,1.66,1.19l-.93.94c-.7-.84-1.67-1.26-2.91-1.26-1.12,0-2.09.39-2.9,1.18s-1.22,1.81-1.22,3.06.41,2.28,1.22,3.06c.82.79,1.78,1.18,2.9,1.18,1.19,0,2.18-.4,2.97-1.19.51-.52.81-1.23.89-2.15h-3.86v-1.28h5.15c.05.28.07.54.07.8Z"/><path class="gph2" d="M92.07,13.71h-4.84v3.37h4.37v1.28h-4.37v3.37h4.84v1.31h-6.21v-10.63h6.21v1.31h0Z"/><path class="gph2" d="M97.83,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gph2" d="M106.08,23.03v-10.63h1.36v10.63h-1.36Z"/><path class="gph2" d="M113.51,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gph2" d="M130.3,21.66c-1.05,1.08-2.34,1.61-3.9,1.61s-2.85-.54-3.9-1.61c-1.05-1.07-1.57-2.39-1.57-3.94s.52-2.87,1.57-3.94c1.04-1.08,2.34-1.61,3.9-1.61s2.84.54,3.89,1.62c1.05,1.08,1.57,2.39,1.57,3.93s-.52,2.87-1.57,3.94ZM123.52,20.77c.79.8,1.75,1.19,2.89,1.19s2.1-.4,2.89-1.19c.79-.8,1.18-1.81,1.18-3.05s-.4-2.26-1.18-3.05c-.78-.8-1.75-1.19-2.89-1.19s-2.1.4-2.89,1.19c-.78.8-1.18,1.81-1.18,3.05s.4,2.26,1.18,3.05Z"/><path class="gph2" d="M133.79,23.03v-10.63h1.66l5.17,8.27h.06l-.06-2.05v-6.22h1.37v10.63h-1.43l-5.41-8.67h-.06l.06,2.05v6.62h-1.37,0Z"/></g>
+            <path class="gph3" d="M120.61,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM120.61,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM104.11,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM104.11,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM84.48,40.85v3.2h7.65c-.23,1.8-.83,3.11-1.74,4.03-1.11,1.11-2.85,2.34-5.91,2.34-4.71,0-8.39-3.8-8.39-8.51s3.68-8.51,8.39-8.51c2.54,0,4.4,1,5.76,2.28l2.26-2.26c-1.91-1.83-4.45-3.22-8.02-3.22-6.45,0-11.87,5.25-11.87,11.7s5.42,11.7,11.87,11.7c3.48,0,6.11-1.14,8.16-3.28,2.11-2.11,2.77-5.08,2.77-7.48,0-.74-.06-1.43-.17-2h-10.76,0ZM164.75,43.33c-.63-1.68-2.54-4.8-6.45-4.8s-7.11,3.05-7.11,7.53c0,4.22,3.2,7.53,7.48,7.53,3.45,0,5.45-2.11,6.28-3.34l-2.57-1.71c-.86,1.26-2.03,2.08-3.71,2.08s-2.88-.77-3.65-2.28l10.08-4.17-.34-.86h0ZM154.47,45.84c-.09-2.91,2.26-4.4,3.94-4.4,1.31,0,2.43.66,2.8,1.6l-6.74,2.8ZM146.28,53.15h3.31v-22.15h-3.31v22.15ZM140.86,40.22h-.11c-.74-.88-2.17-1.68-3.97-1.68-3.77,0-7.22,3.31-7.22,7.56s3.45,7.51,7.22,7.51c1.8,0,3.22-.8,3.97-1.71h.11v1.08c0,2.88-1.54,4.42-4.03,4.42-2.03,0-3.28-1.46-3.8-2.68l-2.88,1.2c.83,2,3.03,4.45,6.68,4.45,3.88,0,7.16-2.28,7.16-7.85v-13.53h-3.14v1.23ZM137.06,50.64c-2.28,0-4.2-1.91-4.2-4.54s1.91-4.6,4.2-4.6,4.03,1.94,4.03,4.6-1.77,4.54-4.03,4.54ZM180.26,31h-7.92v22.15h3.31v-8.39h4.62c3.66,0,7.27-2.65,7.27-6.88s-3.6-6.88-7.27-6.88ZM180.34,41.68h-4.7v-7.59h4.7c2.47,0,3.87,2.05,3.87,3.8s-1.4,3.8-3.87,3.8h0ZM200.77,38.5c-2.39,0-4.87,1.05-5.9,3.39l2.94,1.23c.63-1.23,1.79-1.62,3.02-1.62,1.71,0,3.45,1.03,3.48,2.85v.23c-.6-.34-1.88-.86-3.45-.86-3.16,0-6.38,1.74-6.38,4.99,0,2.96,2.59,4.87,5.5,4.87,2.22,0,3.45-1,4.22-2.16h.11v1.71h3.19v-8.49c0-3.93-2.94-6.13-6.73-6.13h0ZM200.38,50.63c-1.08,0-2.59-.54-2.59-1.88,0-1.71,1.88-2.37,3.5-2.37,1.45,0,2.14.31,3.02.74-.26,2.05-2.02,3.5-3.93,3.5ZM219.12,38.98l-3.79,9.6h-.11l-3.93-9.6h-3.56l5.9,13.42-3.36,7.47h3.45l9.09-20.89h-3.68ZM189.35,53.15h3.31v-22.15h-3.31v22.15Z"/>
+            <g><path class="gph6" d="M36.6,34.41l-18.86,20.02s0,0,0,.01c.58,2.17,2.56,3.77,4.92,3.77.94,0,1.83-.26,2.58-.7l.06-.04,21.23-12.25-9.94-10.82Z"/><path class="gph5" d="M55.68,31h-.02s-9.17-5.33-9.17-5.33l-10.33,9.19,10.36,10.36,9.12-5.26c1.6-.86,2.68-2.55,2.68-4.49s-1.07-3.61-2.65-4.47h0Z"/><path class="gph0" d="M17.73,16.44c-.11.42-.17.86-.17,1.31v35.38c0,.45.06.89.17,1.31l19.51-19.51-19.51-18.49Z"/><path class="gph4" d="M36.74,35.43l9.76-9.76-21.21-12.3c-.77-.46-1.67-.73-2.63-.73-2.36,0-4.34,1.6-4.92,3.78h0s19,19,19,19h0Z"/></g>
           </svg>
         </a>
         <a href="https://github.com/samyyy2311/Labelyze.in/releases/download/v1.6/app-release.apk" class="badge-gplay" target="_blank" rel="noopener" aria-label="Download APK from GitHub">
@@ -484,13 +431,6 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
       <div class="stdc"><div class="fw"><img src="https://flagcdn.com/w80/us.png" alt="US"></div><div class="sdn">US FDA</div><div class="sdd">Food and Drug Administration. Governs food additives and ingredient safety with a well-documented, publicly accessible regulatory database.</div></div>
       <div class="stdc ref"><div class="fw"><img src="https://flagcdn.com/w80/in.png" alt="India"></div><div class="sdn">FSSAI</div><div class="sdd">India's food regulator. Used as the reference point. Labelyze shows when a product is permitted locally but treated more strictly abroad.</div></div>
     </div>
-    <div class="also rv">
-      <span class="also-label">Also checked against:</span>
-      <div class="ap"><div class="fw"><img src="https://flagcdn.com/w80/ca.png" alt="Canada"></div>Health Canada</div>
-      <div class="ap"><div class="fw"><img src="https://flagcdn.com/w80/gb.png" alt="UK"></div>UK FSA</div>
-      <!-- WHO Codex with flag instead of emoji -->
-      <div class="ap"><div class="fw"><img src="https://flagcdn.com/w80/un.png" alt="WHO"></div>WHO Codex</div>
-    </div>
   </div>
 </div>
 
@@ -502,7 +442,7 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
     <div class="fl2 rv">
       <div class="fr"><div class="fn">01</div><div><div class="ft">Personalised Safety Verdict</div><div class="fd3">The first thing you see is a one-line verdict based on your exact health profile and dietary conditions. If you have diabetes, IBS, or a lactose intolerance, the verdict accounts for that. Set your conditions once and every scan is personalised from there.</div><div class="tag tr">Core Feature</div></div></div>
       <div class="fr"><div class="fn">02</div><div><div class="ft">Banned Elsewhere. Known Here.</div><div class="fd3">When an ingredient is prohibited in the EU or US but sold freely in India, you know before you buy. Every flag shows which regulation applies, when it was enacted, and the health reason behind it. No black-box warnings. Every claim has a source.</div><div class="tag tr">India Gap</div></div></div>
-      <div class="fr"><div class="fn">03</div><div><div class="ft">Works Fully Offline</div><div class="fd3">Barcode lookups run entirely against a local database on your device. No internet required for most scans. This is not a connectivity feature — it is how the app is built. Works the same in a supermarket basement with no signal.</div><div class="tag tg">Offline First</div></div></div>
+      <div class="fr"><div class="fn">03</div><div><div class="ft">Works Fully Offline</div><div class="fd3">Barcode lookups run entirely against a local database on your device. No internet required for most scans. This is not a connectivity feature. It is how the app is built. Works the same in a supermarket basement with no signal.</div><div class="tag tg">Offline First</div></div></div>
       <div class="fr"><div class="fn">04</div><div><div class="ft">Your Data Never Leaves Your Device</div><div class="fd3">Scan history, health profiles, dietary preferences, personal notes, watchlist. All processed entirely on your phone. Never sent to servers. This is how it is built, not a policy that can change.</div><div class="tag tg">Privacy by Design</div></div></div>
       <div class="fr"><div class="fn">05</div><div><div class="ft">Label Lie Detector</div><div class="fd3">Every claim on the front of the pack checked against the actual ingredient list. Zero Sugar hiding maltodextrin. High Protein that does not meet the EU threshold. Caught every time, with evidence.</div><div class="tag ty">Coming Soon</div></div></div>
       <div class="fr"><div class="fn">06</div><div><div class="ft">AR Shelf Scanning</div><div class="fd3">Point your camera at a supermarket aisle and safety scores appear live above every product in view. No tapping. See the verdict before you reach for the shelf.</div><div class="tag ty">Coming Soon</div></div></div>
@@ -656,37 +596,38 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
 
 <!-- Proper footer with legal columns -->
 <footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="/" class="flo">Label<span>yze</span></a>
-      <p class="footer-tagline">Know what is actually in your food. Free, private, offline.</p>
+  <div class="ft-inner">
+    <div class="ft-left">
+      <a href="/" class="ft-logo">Label<span>yze</span></a>
+      <p class="ft-tagline">Know what is in your food.</p>
+      <p class="ft-sub">Free &middot; Private &middot; Offline</p>
     </div>
-    <div class="footer-links-group">
-      <div class="footer-col">
-        <div class="footer-col-title">Product</div>
-        <a href="#standards">Standards</a>
+    <div class="ft-cols">
+      <div class="ft-col">
+        <p class="ft-col-head">App</p>
         <a href="#features">Features</a>
         <a href="#scoring">Scoring</a>
         <a href="#mission">Mission</a>
-        <a href="#download">Download</a>
+        <a href="/changelog">Changelog</a>
+        <a href="/support">Support</a>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Connect</div>
+      <div class="ft-col">
+        <p class="ft-col-head">Connect</p>
         <a href="https://instagram.com/labelyze.in" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X (Twitter)</a>
-        <a href="mailto:founder@labelyze.in">founder&#64;labelyze.in</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Legal</div>
-        <a href="/privacy">Privacy Policy</a>
-        <span onclick="openPP()">Privacy (overlay)</span>
+        <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X</a>
+        <a href="https://github.com/samyyy2311" target="_blank" rel="noopener">GitHub</a>
         <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a>
+      </div>
+      <div class="ft-col">
+        <p class="ft-col-head">Legal</p>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-legal">Labelyze is an informational tool. Information provided is based on publicly available regulatory data from FSSAI, EU EFSA, US FDA, Health Canada, UK FSA, and WHO Codex. It is not medical advice. Always consult a qualified health professional for dietary or medical decisions.</p>
-    <span class="footer-copy">&copy; 2026 CaffeineLabs · India</span>
+  <div class="ft-bottom">
+    <p class="ft-disclaimer">Labelyze is an informational tool. Content is based on publicly available data from FSSAI, EU EFSA, and US FDA. Not medical advice.</p>
+    <span class="ft-copy">&copy; <span id="ftyr"></span> CaffeineLabs</span>
   </div>
 </footer>
 
@@ -722,9 +663,9 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
     var m=document.getElementById('mobl'),b=document.getElementById('hamBtn');
     m.classList.remove('open');m.setAttribute('aria-hidden','true');b.classList.remove('open');document.body.style.overflow='';
   };
-  window.openPP=function(){document.getElementById('lov').style.display='block';document.getElementById('lov').scrollTop=0;document.body.style.overflow='hidden';};
-  window.closePP=function(){document.getElementById('lov').style.display='none';document.body.style.overflow='';};
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePP();closeMob();}});
+  
+  
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMob();}});
 
   var bub=document.getElementById('scoreBub'),flg=document.getElementById('flagBub');
   if(bub){
@@ -749,6 +690,7 @@ footer{border-top:.5px solid var(--b1);padding:32px 52px}
     });
   },300);
 })();
+document.getElementById("ftyr").textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
