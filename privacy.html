@@ -65,20 +65,22 @@ body{font-family:var(--fb);background:var(--bg);color:var(--w1);-webkit-font-smo
 .data-cell{padding:11px 16px;color:var(--w2);line-height:1.5}
 .data-cell.label{color:var(--w3);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .data-cell.key{color:var(--w1);font-weight:500;font-size:13px}
-.site-footer{border-top:.5px solid var(--b1);padding:36px 52px}
-.sf-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:28px;margin-bottom:28px}
-.sf-logo{font-family:var(--fd);font-weight:900;font-size:15px;letter-spacing:-.3px;color:var(--w1);text-decoration:none;display:block;margin-bottom:6px}
+.site-footer{border-top:.5px solid var(--b1);padding:40px 52px 32px}
+.sf-top{display:grid;grid-template-columns:1.4fr 2.6fr;gap:64px;align-items:start;margin-bottom:32px}
+.sf-brand{display:flex;flex-direction:column;gap:10px}
+.sf-logo{font-family:var(--fd);font-weight:900;font-size:16px;letter-spacing:-.3px;color:var(--w1);text-decoration:none;line-height:1}
 .sf-logo span{color:var(--a)}
-.sf-tagline{font-size:11px;color:var(--w3);line-height:1.5;max-width:200px}
-.sf-cols{display:flex;gap:48px;flex-wrap:wrap}
-.sf-col-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-bottom:12px}
-.sf-col a{display:block;font-size:12px;color:var(--w3);text-decoration:none;transition:color .2s;margin-bottom:9px}
-.sf-col a:last-child{margin-bottom:0}
+.sf-tagline{font-size:12.5px;color:var(--w2);line-height:1.55;font-weight:400}
+.sf-tagline-sub{font-size:11.5px;color:var(--w3);line-height:1.5;letter-spacing:.02em}
+.sf-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.sf-col-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-bottom:14px;display:block}
+.sf-col{display:flex;flex-direction:column;gap:9px}
+.sf-col a{font-size:12px;color:var(--w3);text-decoration:none;transition:color .2s;line-height:1.3}
 .sf-col a:hover{color:var(--a)}
-.sf-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:.5px solid var(--b1)}
-.sf-legal{font-size:11px;color:var(--w3);line-height:1.65;max-width:580px}
-.sf-copy{font-size:11px;color:var(--w3);white-space:nowrap}
-@media(max-width:700px){.subnav{padding:14px 20px}.doc-wrap{padding:44px 20px 80px}.site-footer{padding:28px 20px}.sf-top{flex-direction:column}.sf-cols{gap:28px}.sf-bottom{flex-direction:column;align-items:flex-start}.data-row{grid-template-columns:1fr}.data-cell.label{border-bottom:none;padding-bottom:4px}}
+.sf-bottom{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:24px;border-top:.5px solid var(--b1)}
+.sf-legal{font-size:11px;color:var(--w3);line-height:1.65;max-width:620px}
+.sf-copy{font-size:11px;color:var(--w3);white-space:nowrap;font-weight:500}
+@media(max-width:700px){.subnav{padding:14px 20px}.doc-wrap{padding:44px 20px 80px}.site-footer{padding:28px 20px}.sf-top{grid-template-columns:1fr;gap:32px}.sf-cols{grid-template-columns:repeat(2,1fr);gap:24px}.sf-bottom{flex-direction:column;align-items:flex-start}.data-row{grid-template-columns:1fr}.data-cell.label{border-bottom:none;padding-bottom:4px}}
 </style>
 </head>
 <body>
@@ -107,7 +109,7 @@ body{font-family:var(--fb);background:var(--bg);color:var(--w1);-webkit-font-smo
   <div class="doc-section">
     <h2>1. Controller Information</h2>
     <p>The data controller for this application is CaffeineLabs, an independent software development studio registered in India, operating under the brand Labelyze. The application identifier is <strong>in.caffeinelabs.labelyze</strong>.</p>
-    <p>For all privacy-related inquiries, contact: <a href="mailto:hello@labelyze.in">hello@labelyze.in</a></p>
+    <p>For all privacy-related inquiries, contact: <a href="/cdn-cgi/l/email-protection#82eae7eeeeedc2eee3e0e7eefbf8e7acebec"><span class="__cf_email__" data-cfemail="6e060b0202012e020f0c0b0217140b400700">[email&#160;protected]</span></a></p>
 
     <h2>2. Scope</h2>
     <p>This Privacy Policy applies to the Labelyze Android application and the associated website at labelyze.in. It describes what data is processed, the legal basis for any processing, where data is stored, and the rights available to users.</p>
@@ -152,7 +154,7 @@ body{font-family:var(--fb);background:var(--bg);color:var(--w1);-webkit-font-smo
 
     <h2>9. Data Retention and Deletion</h2>
     <p>All user data generated within the application is stored exclusively on the user's device. There is no server-side account or profile associated with any user. Data is retained for as long as the application is installed. Uninstalling the application or clearing application data from device settings permanently removes all stored data.</p>
-    <p>Because CaffeineLabs does not hold personal data on its servers, there is no server-side deletion process to invoke. For product submissions (Section 5), which contain no personal identifiers, contact <a href="mailto:hello@labelyze.in">hello@labelyze.in</a> with the relevant barcode if you wish to request removal of submitted data.</p>
+    <p>Because CaffeineLabs does not hold personal data on its servers, there is no server-side deletion process to invoke. For product submissions (Section 5), which contain no personal identifiers, contact <a href="/cdn-cgi/l/email-protection#2f474a4343406f434e4d4a4356554a014641"><span class="__cf_email__" data-cfemail="5b333e3737341b373a393e3722213e753235">[email&#160;protected]</span></a> with the relevant barcode if you wish to request removal of submitted data.</p>
 
     <h2>10. Data Transfers</h2>
     <p>Labelyze does not transfer personal data across borders. Product submission data, which contains no personal identifiers, may be processed on servers located in India. No personal data is transferred to any third country or international organisation.</p>
@@ -171,14 +173,14 @@ body{font-family:var(--fb);background:var(--bg);color:var(--w1);-webkit-font-smo
       <li><strong>Right to withdraw consent:</strong> You may withdraw consent for product submissions at any time via Profile &gt; Data and Privacy.</li>
       <li><strong>Right to object:</strong> You may raise objections to any data processing by contacting us at the address in Section 1.</li>
     </ul>
-    <p>To exercise any of these rights, contact <a href="mailto:hello@labelyze.in">hello@labelyze.in</a>. Requests will be acknowledged within 7 business days.</p>
+    <p>To exercise any of these rights, contact <a href="/cdn-cgi/l/email-protection#80e8e5ececefc0ece1e2e5ecf9fae5aee9ee"><span class="__cf_email__" data-cfemail="fa929f969695ba969b989f9683809fd49394">[email&#160;protected]</span></a>. Requests will be acknowledged within 7 business days.</p>
 
     <h2>14. Changes to This Policy</h2>
     <p>CaffeineLabs reserves the right to update this Privacy Policy to reflect changes in the application, applicable law, or its practices. Any material changes will be published at <a href="https://labelyze.in/privacy">labelyze.in/privacy</a> with a revised Effective Date. Where changes are significant, users will be notified within the application on next launch. Continued use of the application following publication of a revised policy constitutes acceptance of the updated terms.</p>
 
     <h2>15. Contact</h2>
-    <p>Privacy inquiries: <a href="mailto:hello@labelyze.in">hello@labelyze.in</a></p>
-    <p>General contact: <a href="mailto:hello@labelyze.in">hello@labelyze.in</a></p>
+    <p>Privacy inquiries: <a href="/cdn-cgi/l/email-protection#b9d1dcd5d5d6f9d5d8dbdcd5c0c3dc97d0d7"><span class="__cf_email__" data-cfemail="91f9f4fdfdfed1fdf0f3f4fde8ebf4bff8ff">[email&#160;protected]</span></a></p>
+    <p>General contact: <a href="/cdn-cgi/l/email-protection#3e565b5252517e525f5c5b5247445b105750"><span class="__cf_email__" data-cfemail="3f575a5353507f535e5d5a5346455a115651">[email&#160;protected]</span></a></p>
     <p>Developer: CaffeineLabs, India &middot; <a href="https://caffeinelabs.in">caffeinelabs.in</a></p>
 
     <div class="doc-divider"></div>
@@ -187,28 +189,30 @@ body{font-family:var(--fb);background:var(--bg);color:var(--w1);-webkit-font-smo
 </main>
 <footer class="site-footer">
   <div class="sf-top">
-    <div>
+    <div class="sf-brand">
       <a href="/" class="sf-logo">Label<span>yze</span></a>
-      <p class="sf-tagline">Know what is in your food. Free, private, offline.</p>
+      <p class="sf-tagline">Know what's in your food.</p>
+      <p class="sf-tagline-sub">Free &middot; Private &middot; Offline</p>
     </div>
     <div class="sf-cols">
       <div class="sf-col">
-        <div class="sf-col-title">Product</div>
+        <span class="sf-col-title">Product</span>
         <a href="/#features">Features</a>
         <a href="/#scoring">Scoring</a>
         <a href="/changelog">Changelog</a>
         <a href="/support">Support</a>
       </div>
       <div class="sf-col">
-        <div class="sf-col-title">Legal</div>
+        <span class="sf-col-title">Legal</span>
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms of Service</a>
       </div>
       <div class="sf-col">
-        <div class="sf-col-title">Connect</div>
+        <span class="sf-col-title">Connect</span>
         <a href="https://instagram.com/labelyze.in" target="_blank" rel="noopener">Instagram</a>
         <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X (Twitter)</a>
         <a href="https://github.com/samyyy2311" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a>
       </div>
     </div>
   </div>
@@ -217,7 +221,7 @@ body{font-family:var(--fb);background:var(--bg);color:var(--w1);-webkit-font-smo
     <span class="sf-copy">&copy; <span id="yr"></span> CaffeineLabs &middot; India</span>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   var h=document.documentElement,t=localStorage.getItem('lyz_theme')||'dark';
   h.setAttribute('data-theme',t);
