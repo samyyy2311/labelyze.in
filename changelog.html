@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog · Labelyze</title>
+<meta name="description" content="Labelyze version history and release notes.">
+<meta property="og:title" content="Changelog · Labelyze">
+<meta property="og:description" content="Labelyze version history and release notes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://labelyze.in/changelog">
+<meta property="og:image" content="https://labelyze.in/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#08090C">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="canonical" href="https://labelyze.in/changelog">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+[data-theme="dark"]{--bg:#08090C;--s1:#0f1116;--b1:rgba(255,255,255,0.05);--a:#5BB8FF;--adim:rgba(91,184,255,0.07);--aborder:rgba(91,184,255,0.22);--w1:#F4F1EB;--w2:rgba(244,241,235,0.55);--w3:rgba(244,241,235,0.3);--card-border:rgba(255,255,255,0.1);color-scheme:dark;}
+[data-theme="light"]{--bg:#F1EDE6;--s1:#F3F6FA;--b1:rgba(26,35,56,0.10);--a:#5BB8FF;--adim:#E4F3FF;--aborder:rgba(91,184,255,0.35);--w1:#121923;--w2:rgba(18,25,35,0.62);--w3:rgba(18,25,35,0.42);--card-border:rgba(26,35,56,0.10);color-scheme:light;}
+:root{--blur:blur(48px);--r:16px;--fd:'Montserrat',sans-serif;--fb:'DM Sans',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--w1);-webkit-font-smoothing:antialiased;line-height:1.65;transition:background .3s,color .3s;min-height:100vh}
+.subnav{display:flex;align-items:center;justify-content:space-between;padding:18px 52px;border-bottom:.5px solid var(--b1);position:sticky;top:0;background:var(--bg);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);z-index:100}
+[data-theme="light"] .subnav{background:rgba(241,237,230,0.95)}
+.logo{font-family:var(--fd);font-weight:900;font-size:17px;letter-spacing:-0.5px;color:var(--w1);text-decoration:none}
+.logo span{color:var(--a)}
+.subnav-r{display:flex;align-items:center;gap:14px}
+.back-link{font-size:13px;color:var(--w3);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
+.back-link:hover{color:var(--w1)}
+.back-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}
+.tt{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,0.07);border:1px solid var(--card-border);cursor:pointer;position:relative;flex-shrink:0;overflow:hidden}
+[data-theme="light"] .tt{background:rgba(26,35,56,0.06);border-color:var(--b1)}
+.tt-thumb{position:absolute;top:4px;left:4px;width:14px;height:14px;border-radius:50%;background:var(--w1);transition:transform .25s cubic-bezier(.34,1.56,.64,1);z-index:2}
+[data-theme="light"] .tt-thumb{transform:translateX(18px)}
+.tt-icon{position:absolute;top:50%;transform:translateY(-50%);pointer-events:none;right:5px;z-index:1;display:flex;align-items:center;color:var(--w3)}
+[data-theme="light"] .tt-icon{right:auto;left:5px}
+.tt-icon svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:1.5}
+.doc-wrap{max-width:700px;margin:0 auto;padding:72px 52px 120px}
+.doc-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--a);margin-bottom:14px}
+.doc-h1{font-family:var(--fd);font-size:clamp(30px,4vw,46px);font-weight:900;letter-spacing:-1.5px;line-height:1.04;color:var(--w1);margin-bottom:10px}
+.doc-meta{font-size:11px;color:var(--w3);letter-spacing:.04em;margin-bottom:52px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.doc-section h2{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--a);margin:44px 0 12px;letter-spacing:.1em;text-transform:uppercase}
+.doc-section p{font-size:14px;color:var(--w2);line-height:1.85;margin-bottom:10px}
+.doc-section p:last-child{margin-bottom:0}
+.doc-section ul,.doc-section ol{margin:10px 0 12px 20px;display:flex;flex-direction:column;gap:6px}
+.doc-section li{font-size:14px;color:var(--w2);line-height:1.78}
+.doc-section a{color:var(--a);text-decoration:none}
+.doc-section a:hover{text-decoration:underline}
+.doc-section strong{color:var(--w1);font-weight:500}
+.doc-divider{height:.5px;background:var(--b1);margin:48px 0}
+.site-footer{border-top:.5px solid var(--b1);padding:36px 52px}
+.sf-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:28px;margin-bottom:28px}
+.sf-logo{font-family:var(--fd);font-weight:900;font-size:15px;letter-spacing:-.3px;color:var(--w1);text-decoration:none;display:block;margin-bottom:6px}
+.sf-logo span{color:var(--a)}
+.sf-tagline{font-size:11px;color:var(--w3);line-height:1.5;max-width:200px}
+.sf-cols{display:flex;gap:48px;flex-wrap:wrap}
+.sf-col-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-bottom:12px}
+.sf-col a{display:block;font-size:12px;color:var(--w3);text-decoration:none;transition:color .2s;margin-bottom:9px}
+.sf-col a:last-child{margin-bottom:0}
+.sf-col a:hover{color:var(--a)}
+.sf-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:.5px solid var(--b1)}
+.sf-legal{font-size:11px;color:var(--w3);line-height:1.65;max-width:580px}
+.sf-copy{font-size:11px;color:var(--w3);white-space:nowrap}
+@media(max-width:700px){.subnav{padding:14px 20px}.doc-wrap{padding:44px 20px 80px}.site-footer{padding:28px 20px}.sf-top{flex-direction:column}.sf-cols{gap:28px}.sf-bottom{flex-direction:column;align-items:flex-start}}
+
+.cl-list{display:flex;flex-direction:column;gap:0}
+.cl-entry{display:grid;grid-template-columns:110px 1fr;gap:0 28px;padding:32px 0;border-bottom:.5px solid var(--b1)}
+.cl-entry:last-child{border-bottom:none}
+.cl-version{font-family:var(--fd);font-size:13px;font-weight:700;color:var(--a);letter-spacing:-.2px;line-height:1.3}
+.cl-date{font-size:11px;color:var(--w3);margin-top:3px}
+.cl-title{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--w1);margin-bottom:10px;letter-spacing:-.3px}
+.cl-items{display:flex;flex-direction:column;gap:7px}
+.cl-item{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--w2);line-height:1.65}
+.cl-badge{flex-shrink:0;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:100px;border:.5px solid;margin-top:3px}
+.badge-new{color:var(--green);border-color:rgba(0,200,150,.3);background:rgba(0,200,150,.08)}
+.badge-fix{color:var(--amber);border-color:rgba(244,187,114,.3);background:rgba(244,187,114,.08)}
+.badge-imp{color:var(--a);border-color:rgba(91,184,255,.3);background:rgba(91,184,255,.08)}
+:root{--green:#00C896;--amber:#F4BB72;}
+[data-theme="light"]{--green:#00B894;--amber:#F0A94A;}
+@media(max-width:600px){.cl-entry{grid-template-columns:1fr}.cl-version{margin-bottom:8px}}
+</style>
+</head>
+<body>
+<nav class="subnav">
+  <a href="/" class="logo">Label<span>yze</span></a>
+  <div class="subnav-r">
+    <a href="/" class="back-link"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Back</a>
+    <button class="tt" id="themeToggle" aria-label="Toggle theme">
+      <div class="tt-thumb"></div>
+      <span class="tt-icon" id="ttIconDark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+      <span class="tt-icon" id="ttIconLight" style="display:none"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+    </button>
+  </div>
+</nav>
+<main class="doc-wrap">
+  <p class="doc-eyebrow">Updates</p>
+  <h1 class="doc-h1">Changelog</h1>
+  <div class="doc-meta">Version history and release notes</div>
+  <div class="doc-section">
+    <div class="cl-list">
+      <div class="cl-entry">
+        <div>
+          <div class="cl-version">v1.6</div>
+          <div class="cl-date">May 2026</div>
+        </div>
+        <div>
+          <div class="cl-title">Google Play Store launch</div>
+          <div class="cl-items">
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>App published on Google Play Store</div>
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>Indus App Store listing initiated</div>
+            <div class="cl-item"><span class="cl-badge badge-imp">Improved</span>Expanded ingredient database to 400+ entries with cited regulatory sources</div>
+            <div class="cl-item"><span class="cl-badge badge-imp">Improved</span>Scoring algorithm refined with 5 layers and 25+ factors</div>
+            <div class="cl-item"><span class="cl-badge badge-fix">Fixed</span>Barcode scanner reliability improvements on low-light environments</div>
+          </div>
+        </div>
+      </div>
+      <div class="cl-entry">
+        <div>
+          <div class="cl-version">v1.5</div>
+          <div class="cl-date">March 2026</div>
+        </div>
+        <div>
+          <div class="cl-title">Health profiles and offline-first rebuild</div>
+          <div class="cl-items">
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>Personalised safety verdict based on user health profile</div>
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>Support for diabetes, IBS, lactose intolerance, and 12 other conditions</div>
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>Ingredient watchlist for custom flagging</div>
+            <div class="cl-item"><span class="cl-badge badge-imp">Improved</span>Full offline operation: all lookups run against local database</div>
+            <div class="cl-item"><span class="cl-badge badge-imp">Improved</span>Dark mode and Material You support</div>
+          </div>
+        </div>
+      </div>
+      <div class="cl-entry">
+        <div>
+          <div class="cl-version">v1.0</div>
+          <div class="cl-date">January 2026</div>
+        </div>
+        <div>
+          <div class="cl-title">Initial release</div>
+          <div class="cl-items">
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>Barcode scanning for Indian packaged food products</div>
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>Cross-reference against EU EFSA and US FDA regulatory databases</div>
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>A to F grading system with transparent score breakdown</div>
+            <div class="cl-item"><span class="cl-badge badge-new">New</span>Initial ingredient database covering common Indian packaged food additives</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="doc-divider"></div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="sf-top">
+    <div>
+      <a href="/" class="sf-logo">Label<span>yze</span></a>
+      <p class="sf-tagline">Know what is in your food. Free, private, offline.</p>
+    </div>
+    <div class="sf-cols">
+      <div class="sf-col">
+        <div class="sf-col-title">Product</div>
+        <a href="/#features">Features</a>
+        <a href="/#scoring">Scoring</a>
+        <a href="/changelog">Changelog</a>
+        <a href="/support">Support</a>
+      </div>
+      <div class="sf-col">
+        <div class="sf-col-title">Legal</div>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </div>
+      <div class="sf-col">
+        <div class="sf-col-title">Connect</div>
+        <a href="https://instagram.com/labelyze.in" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="https://github.com/samyyy2311" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a>
+      </div>
+    </div>
+  </div>
+  <div class="sf-bottom">
+    <p class="sf-legal">Labelyze is an informational tool. Content is based on publicly available regulatory data from FSSAI, EU EFSA, and US FDA. It does not constitute medical or dietary advice. Consult a qualified health professional before making dietary decisions.</p>
+    <span class="sf-copy">&copy; <span id="yr"></span> CaffeineLabs &middot; India</span>
+  </div>
+</footer>
+<script>
+(function(){
+  var h=document.documentElement,t=localStorage.getItem('lyz_theme')||'dark';
+  h.setAttribute('data-theme',t);
+  function upd(t){var d=document.getElementById('ttIconDark'),l=document.getElementById('ttIconLight');if(t==='dark'){d.style.display='flex';l.style.display='none';}else{d.style.display='none';l.style.display='flex';}}
+  upd(t);
+  document.getElementById('themeToggle').addEventListener('click',function(){var next=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',next);upd(next);localStorage.setItem('lyz_theme',next);});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
