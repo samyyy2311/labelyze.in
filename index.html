@@ -94,12 +94,17 @@ nav::before{content:'';position:absolute;inset:0;border-radius:100px;pointer-eve
 .nav-r{display:flex;align-items:center;gap:10px;flex-shrink:0;position:relative;z-index:1}
 
 /* Theme toggle */
-.tt{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,0.07);border:1px solid var(--card-border);cursor:pointer;position:relative;flex-shrink:0;overflow:hidden}
-.tt-thumb{position:absolute;top:4px;left:4px;width:14px;height:14px;border-radius:50%;background:var(--w1);transition:transform .25s cubic-bezier(.34,1.56,.64,1);z-index:2}
-[data-theme="light"] .tt-thumb{transform:translateX(18px)}
-.tt-icon{position:absolute;top:50%;transform:translateY(-50%);pointer-events:none;right:6px;z-index:1;display:flex;align-items:center;color:var(--w3)}
-[data-theme="light"] .tt-icon{right:auto;left:6px}
-.tt-icon svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round}
+.tt{width:44px;height:24px;border-radius:100px;background:rgba(255,255,255,0.06);border:1px solid var(--card-border);cursor:pointer;position:relative;flex-shrink:0;overflow:hidden;transition:background .2s,border-color .2s}
+.tt:hover{background:rgba(255,255,255,0.1);border-color:var(--b2)}
+.tt:active .tt-thumb{transform:scale(0.92)}
+[data-theme="light"] .tt:active .tt-thumb{transform:translateX(20px) scale(0.92)}
+.tt-thumb{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--w1);transition:transform .25s cubic-bezier(.34,1.56,.64,1);z-index:2;box-shadow:0 1px 3px rgba(0,0,0,0.3)}
+[data-theme="light"] .tt-thumb{transform:translateX(20px);background:#0d1117}
+.tt-icon{position:absolute;top:50%;transform:translateY(-50%);pointer-events:none;z-index:1;display:flex;align-items:center;justify-content:center;width:18px;height:18px}
+#ttIconDark{right:3px;color:#FFD27A}
+#ttIconLight{left:3px;color:var(--a)}
+[data-theme="light"] #ttIconLight{color:#5B8AC9}
+.tt-icon svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round}
 
 .ncta{display:inline-flex;align-items:center;height:34px;padding:0 20px;background:var(--a);border:none;border-radius:100px;font-family:var(--fd);font-size:12px;font-weight:700;color:#08090C;cursor:pointer;white-space:nowrap;text-decoration:none;transition:opacity .2s,transform .2s}
 .ncta:hover{opacity:.86;transform:translateY(-1px)}
@@ -355,21 +360,22 @@ nav::before{content:'';position:absolute;inset:0;border-radius:100px;pointer-eve
     <div class="so fu d3">
       <div class="phone">
         <div class="phone-screen" id="phoneScreen">
-          <img src="assets/screens/scanner.png"  class="active" alt="Scanner screen">
-          <img src="assets/screens/history.png"  alt="History screen">
-          <img src="assets/screens/discover.png" alt="Discover screen">
-          <img src="assets/screens/browse.png"   alt="Browse screen">
-          <img src="assets/screens/profile.png"  alt="Profile screen">
+          <img src="snapshots/scanner.png"  class="active" alt="Scanner screen">
+          <img src="snapshots/history.png"  alt="History screen">
+          <img src="snapshots/discover.png" alt="Discover screen">
+          <img src="snapshots/browse.png"   alt="Browse screen">
+          <img src="snapshots/profile.png"  alt="Profile screen">
         </div>
       </div>
     </div>
     <div class="fu d4">
       <div class="badges">
         <a href="https://play.google.com/store/apps/details?id=in.caffeinelabs.labelyze" class="badge badge-play" target="_blank" rel="noopener" aria-label="Get it on Google Play">
-          <img src="assets/GetItOnGooglePlay.png" alt="Get it on Google Play" width="189" height="56">
+          <img src="snapshots/google-play-badge.png" alt="Get it on Google Play" width="189" height="56">
         </a>
         <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge badge-gh" target="_blank" rel="noopener" aria-label="Download APK from GitHub Releases">
-          <img src="assets/GitHub_Lockup_White.svg" alt="GitHub" height="28">
+          <img src="snapshots/github-lockup-white.svg" alt="GitHub" height="28">
+        </a>
         </a>
       </div>
     </div>
@@ -535,10 +541,10 @@ nav::before{content:'';position:absolute;inset:0;border-radius:100px;pointer-eve
     <p>Free to download. No account required.<br>Works offline from day one.</p>
     <div class="badges">
       <a href="https://play.google.com/store/apps/details?id=in.caffeinelabs.labelyze" class="badge badge-play" target="_blank" rel="noopener" aria-label="Get it on Google Play">
-        <img src="assets/GetItOnGooglePlay.png" alt="Get it on Google Play" width="189" height="56">
+        <img src="snapshots/google-play-badge.png" alt="Get it on Google Play" width="189" height="56">
       </a>
       <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge badge-gh" target="_blank" rel="noopener" aria-label="Download APK from GitHub Releases">
-        <img src="assets/GitHub_Lockup_White.svg" alt="GitHub" height="28">
+        <img src="snapshots/github-lockup-white.svg" alt="GitHub" height="28">
       </a>
     </div>
   </div>
